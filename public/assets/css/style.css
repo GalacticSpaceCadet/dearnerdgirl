@@ -3,35 +3,37 @@ html {
 }
 
 header {
-	height: 70px;
+	height: 60px;
 	width: 100vw;
-	background-color: #333333;
+	background-color: #4E453E;
 	position: fixed;
 	z-index: 50;
 	top: 0px;
 	left: 0px;
 	margin: auto;
-	border-bottom: 1px solid #1effb7;
+	border-bottom: 2px solid #6A8E7A;
+/* Box Shadow */
+	-webkit-box-shadow: -14px 29px 66px -6px #222;
+	-moz-box-shadow: -14px 29px 66px -6px #222;
+	box-shadow: -14px 29px 66px -6px #222;
 }
 
 .logo {
-	color: #1effb7;
-	margin-left: 90px;
+	color: #dfdfdf;
 	margin-top: 10px;
 	display: inline-block;
-	/*font-family: 'VT323', monospace, Arial;*/
-	font-family: 'Share Tech Mono', monospace;
-	font-size: 2em;
-	width: 300px;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	font-size: 2.2em;
+	width: 35vw;
 }
 
-.logoLink {
-	width: 300px;
-}
-
-.heart {
-	height: 10%;
-	width: 10%;
+.flower {
+	position: relative;
+	display: inline-block;
+	float: left;
+	height: 200px;
+	width: 200px;
+	margin-left: 50px;
 }
 
 header .navbar {
@@ -39,24 +41,27 @@ header .navbar {
 	position: relative;
 	display: inline-block;
 	margin-right: 90px;
+	margin-top: -5px;
 }
 
 .navbar a {
+	font-family: 'Share Tech Mono', monospace, Arial;
 	text-decoration: none;
-	color: #1effb7;
+	color: #dfdfdf;
 }
 
 .navbar p {
-	color: #1effb7;
-	font-family: 'VT323', monospace, Arial;
+	font-family: 'Share Tech Mono', monospace;
+	color: #6A8E7A;
 	font-size: 1.5em;
 }
 
 body {
-	margin: 0 auto;
+	margin: 0 0;
 	height: 100%;
 	width: 100%;
-	background-color: #777777;
+	background: url("../images/background.jpg") fixed;
+	background-size: cover;
 }
 
 .mainContainer {
@@ -70,26 +75,44 @@ body {
 	position: relative;
 	height: 150px;
 	width: 70vw;
-	background-color: #333333;
-	border-color: 1px solid #1effb7;
+	/*background-color: #222;*/
 	margin: 0 auto;
 	top: 50px;
-	border: 1px solid #1effb7;
+	border: 1px solid #6A8E7A;
+	border-radius: 20px;
+/*/* Gradient Background */
+/*	background: #ddd;*/ /* For browsers that do not support gradients */
+/*	background: -webkit-linear-gradient(left top, #ddd, #6A8E7A);*/ /* For Safari 5.1 to 6.0 */
+/*	background: -o-linear-gradient(bottom right, #ddd, #6A8E7A); *//* For Opera 11.1 to 12.0 */
+/*	background: -moz-linear-gradient(bottom right, #ddd, #6A8E7A); *//* For Firefox 3.6 to 15 */
+/*	background: linear-gradient(to bottom right, #ddd, #6A8E7A);*/ /* Standard syntax */
+/* Box Shadow */
+	-webkit-box-shadow: -14px 29px 66px -6px #222;
+	-moz-box-shadow: -14px 29px 66px -6px #222;
+	box-shadow: -14px 29px 66px -6px #222;
+	color: #ddd;
 }
 
 .statement h2 {
-	font-family: 'VT323', monospace, Arial;
-	color: #1effb7;
-	font-size: 2em;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	color: #ddd;
+	font-size: 1.8em;
 	text-align: center;
+	padding-top: -15px;
+	padding-bottom: -15px;
+}
+
+.statement p {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	font-size: 1em;
+	color: #dfdfdf;
 }
 
 hr {
-	color: #1effb7;
 	width: 90%;
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, #333, #1effb7, #333);
+    background-image: linear-gradient(to right, #6A8E7A, #ddd, #6A8E7A);
 }
 
 .contentContainer {
@@ -99,43 +122,91 @@ hr {
 
 .postBox {
 	position: relative;
-	background-color: #333333;
-	border: 1px solid #1effb7;
+	border: 1px solid #6A8E7A;
 	display: inline-block;
+	border-radius: 20px;
+/* Gradient Background */
+/*	background: #ddd;*/ /* For browsers that do not support gradients */
+/*	background: -webkit-linear-gradient(left top, #ddd, #6A8E7A);*/ /* For Safari 5.1 to 6.0 */
+/*	background: -o-linear-gradient(bottom right, #ddd, #6A8E7A);*/ /* For Opera 11.1 to 12.0 */
+/*	background: -moz-linear-gradient(bottom right, #ddd, #6A8E7A);*/ /* For Firefox 3.6 to 15 */
+/*	background: linear-gradient(to bottom right, #ddd, #6A8E7A);*/ /* Standard syntax */
+/* Box Shadow */
+	-webkit-box-shadow: -14px 29px 66px -6px #222;
+	-moz-box-shadow: -14px 29px 66px -6px #222;
+	box-shadow: -14px 29px 66px -6px #222;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	font-size: 1em;
+	color: #dfdfdf;
+
 }
 
 #left {
     float:left;
-    width: 25%;
+    width: 25vw;
     margin-left: 100px;
-    margin-right: 10px;
-    width: 350px;
-	height: 300px;
+    margin-right: 10px;	
+    min-height: 275px;
 }
 
 #center {
     margin: 0 auto;
-    width: 25%;
-	height: 300px;
+    width: 25vw;
 	margin-left: 10px;
     margin-right: 10px;
+    min-height: 275px;
 }
 
 #right {
     float:right;
-    width: 25%;
+    width: 25vw;
     margin-right: 100px;
     margin-left: 10px;
-    width: 350px;
-	height: 300px;
+    min-height: 275px;
+}
+
+/* Contacts Form*/
+.formContainer {
+	margin-top: 135px;
+	margin-left: 25%;
+}
+
+.formInput {
+	height: 25px;
+	width: 65%;
+}
+
+.comment {
+	height: 150px;
+	width: 65%;
+}
+
+.formContainer form {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	font-size: 1.2em;
+	color: #ddd;
+}
+
+.formContainer input {
+	border: 1px solid #6A8E7A;
+}
+
+.formContainer textarea {
+	border: 1px solid #6A8E7A;
 }
 
 footer {
 	position: fixed;
 	width: 100vw;
-	background-color: #333;
+	background-color: #423a33;
 	text-align: center;
 	font-size: .9em;
 	bottom: 0;
-	border-top: 1px solid #1effb7;
+	border-top: 1px solid #6A8E7A;
+}
+
+footer p {
+	color: #dfdfdf;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	font-size: 1em;
 }
