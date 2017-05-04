@@ -24,7 +24,7 @@ header {
 	display: inline-block;
 	font-family: 'Share Tech Mono', monospace, Arial;
 	font-size: 2.2em;
-	width: 35vw;
+	width: 267px;
 }
 
 .flower {
@@ -143,7 +143,7 @@ hr {
 
 #left {
     float:left;
-    width: 25vw;
+    min-width: 25%;
     margin-left: 100px;
     margin-right: 10px;	
     min-height: 275px;
@@ -151,7 +151,7 @@ hr {
 
 #center {
     margin: 0 auto;
-    width: 25vw;
+    min-width: 25%;
 	margin-left: 10px;
     margin-right: 10px;
     min-height: 275px;
@@ -159,7 +159,7 @@ hr {
 
 #right {
     float:right;
-    width: 25vw;
+    min-width: 25%;
     margin-right: 100px;
     margin-left: 10px;
     min-height: 275px;
