@@ -172,7 +172,7 @@ hr {
 
 .userDiary {
 	position: relative;
-	height: 150px;
+	min-height: 150px;
 	width: 70vw;
 	/*background-color: #222;*/
 	margin: 0 auto 20px auto;
@@ -225,6 +225,28 @@ hr {
 	margin-top: 12px;
 	margin-left: 20px;
 	padding-bottom: 3px;
+}
+
+/* Post Page */
+.postTextBox {
+	position: relative;
+	text-align: : left;
+	height: 150px;
+	width: 80%;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	border: 1px solid #6A8E7A;
+	border-radius: 5px;
+}
+
+.submitPost {
+	position: relative;
+	text-align: center;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	text-decoration: none;
+	font-size: 1.5em;
+	color: #dfdfdf;
 }
 
 /* Contacts Form */
