@@ -1,6 +1,9 @@
 {
-  "name": "passport-linkedin-examples-login",
+  "name": "dearnerdgirl",
   "version": "0.0.0",
+  "engines": {
+    "node": "7.7.4"
+  },
   "scripts": {
     "start": "npm run server.js"
   },
