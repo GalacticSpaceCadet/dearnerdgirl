@@ -60,11 +60,11 @@ The route `$curl -i localhost:3000/diaries` is used for listing writen diaries
 ## Todo
 
 ### Users
-- restrict password to a regexp
-- allow for user updates
-- dedupe of users when registering (curently any collisions are ignored and only the first user with a provided username is validated)
+- [] restrict password to a regexp
+- [] allow for user updates
+- [] dedupe of users when registering (curently any collisions are ignored and only the first user with a provided username is validated)
 
 ### Diaries
-- add diary
-- edit diary
+- [] add diary
+- [] edit diary
 
