@@ -5,7 +5,7 @@
     "node": "7.7.4"
   },
   "scripts": {
-    "start": "npm run server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "^1.17.1",
