@@ -12,7 +12,7 @@ header {
 	left: 0px;
 	margin: auto;
 	border-bottom: 2px solid #6A8E7A;
-/* Box Shadow */
+	/* Box Shadow */
 	-webkit-box-shadow: -14px 29px 66px -6px #222;
 	-moz-box-shadow: -14px 29px 66px -6px #222;
 	box-shadow: -14px 29px 66px -6px #222;
@@ -80,13 +80,18 @@ body {
 	top: 50px;
 	border: 1px solid #6A8E7A;
 	border-radius: 20px;
-/*/* Gradient Background */
-/*	background: #ddd;*/ /* For browsers that do not support gradients */
-/*	background: -webkit-linear-gradient(left top, #ddd, #6A8E7A);*/ /* For Safari 5.1 to 6.0 */
-/*	background: -o-linear-gradient(bottom right, #ddd, #6A8E7A); *//* For Opera 11.1 to 12.0 */
-/*	background: -moz-linear-gradient(bottom right, #ddd, #6A8E7A); *//* For Firefox 3.6 to 15 */
-/*	background: linear-gradient(to bottom right, #ddd, #6A8E7A);*/ /* Standard syntax */
-/* Box Shadow */
+	/*/* Gradient Background */
+	/*	background: #ddd;*/
+	/* For browsers that do not support gradients */
+	/*	background: -webkit-linear-gradient(left top, #ddd, #6A8E7A);*/
+	/* For Safari 5.1 to 6.0 */
+	/*	background: -o-linear-gradient(bottom right, #ddd, #6A8E7A); */
+	/* For Opera 11.1 to 12.0 */
+	/*	background: -moz-linear-gradient(bottom right, #ddd, #6A8E7A); */
+	/* For Firefox 3.6 to 15 */
+	/*	background: linear-gradient(to bottom right, #ddd, #6A8E7A);*/
+	/* Standard syntax */
+	/* Box Shadow */
 	-webkit-box-shadow: -14px 29px 66px -6px #222;
 	-moz-box-shadow: -14px 29px 66px -6px #222;
 	box-shadow: -14px 29px 66px -6px #222;
@@ -112,9 +117,9 @@ body {
 
 hr {
 	width: 90%;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, #6A8E7A, #ddd, #6A8E7A);
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, #6A8E7A, #ddd, #6A8E7A);
 }
 
 .contentContainer {
@@ -127,13 +132,18 @@ hr {
 	border: 1px solid #6A8E7A;
 	display: inline-block;
 	border-radius: 20px;
-/* Gradient Background */
-/*	background: #ddd;*/ /* For browsers that do not support gradients */
-/*	background: -webkit-linear-gradient(left top, #ddd, #6A8E7A);*/ /* For Safari 5.1 to 6.0 */
-/*	background: -o-linear-gradient(bottom right, #ddd, #6A8E7A);*/ /* For Opera 11.1 to 12.0 */
-/*	background: -moz-linear-gradient(bottom right, #ddd, #6A8E7A);*/ /* For Firefox 3.6 to 15 */
-/*	background: linear-gradient(to bottom right, #ddd, #6A8E7A);*/ /* Standard syntax */
-/* Box Shadow */
+	/* Gradient Background */
+	/*	background: #ddd;*/
+	/* For browsers that do not support gradients */
+	/*	background: -webkit-linear-gradient(left top, #ddd, #6A8E7A);*/
+	/* For Safari 5.1 to 6.0 */
+	/*	background: -o-linear-gradient(bottom right, #ddd, #6A8E7A);*/
+	/* For Opera 11.1 to 12.0 */
+	/*	background: -moz-linear-gradient(bottom right, #ddd, #6A8E7A);*/
+	/* For Firefox 3.6 to 15 */
+	/*	background: linear-gradient(to bottom right, #ddd, #6A8E7A);*/
+	/* Standard syntax */
+	/* Box Shadow */
 	-webkit-box-shadow: -14px 29px 66px -6px #222;
 	-moz-box-shadow: -14px 29px 66px -6px #222;
 	box-shadow: -14px 29px 66px -6px #222;
@@ -141,32 +151,32 @@ hr {
 	font-size: 1em;
 	color: #ddd;
 	text-shadow: 4px 4px 5px #222;
-
 }
 
 #left {
-    float:left;
-    min-width: 25%;
-    margin-left: 100px;
-    margin-right: 10px;	
-    min-height: 275px;
+	float: left;
+	min-width: 25%;
+	margin-left: 100px;
+	margin-right: 10px;
+	min-height: 275px;
 }
 
 #center {
-    margin: 0 auto;
-    min-width: 25%;
+	margin: 0 auto;
+	min-width: 25%;
 	margin-left: 10px;
-    margin-right: 10px;
-    min-height: 275px;
+	margin-right: 10px;
+	min-height: 275px;
 }
 
 #right {
-    float:right;
-    min-width: 25%;
-    margin-right: 100px;
-    margin-left: 10px;
-    min-height: 275px;
+	float: right;
+	min-width: 25%;
+	margin-right: 100px;
+	margin-left: 10px;
+	min-height: 275px;
 }
+
 
 /* Diaries Page */
 
@@ -179,13 +189,18 @@ hr {
 	top: 50px;
 	border: 1px solid #6A8E7A;
 	border-radius: 20px;
-/*/* Gradient Background */
-/*	background: #ddd;*/ /* For browsers that do not support gradients */
-/*	background: -webkit-linear-gradient(left top, #ddd, #6A8E7A);*/ /* For Safari 5.1 to 6.0 */
-/*	background: -o-linear-gradient(bottom right, #ddd, #6A8E7A); *//* For Opera 11.1 to 12.0 */
-/*	background: -moz-linear-gradient(bottom right, #ddd, #6A8E7A); *//* For Firefox 3.6 to 15 */
-/*	background: linear-gradient(to bottom right, #ddd, #6A8E7A);*/ /* Standard syntax */
-/* Box Shadow */
+	/*/* Gradient Background */
+	/*	background: #ddd;*/
+	/* For browsers that do not support gradients */
+	/*	background: -webkit-linear-gradient(left top, #ddd, #6A8E7A);*/
+	/* For Safari 5.1 to 6.0 */
+	/*	background: -o-linear-gradient(bottom right, #ddd, #6A8E7A); */
+	/* For Opera 11.1 to 12.0 */
+	/*	background: -moz-linear-gradient(bottom right, #ddd, #6A8E7A); */
+	/* For Firefox 3.6 to 15 */
+	/*	background: linear-gradient(to bottom right, #ddd, #6A8E7A);*/
+	/* Standard syntax */
+	/* Box Shadow */
 	-webkit-box-shadow: -14px 29px 66px -6px #222;
 	-moz-box-shadow: -14px 29px 66px -6px #222;
 	box-shadow: -14px 29px 66px -6px #222;
@@ -227,7 +242,13 @@ hr {
 	padding-bottom: 3px;
 }
 
+.userImage img {
+	width: 100%;
+}
+
+
 /* Post Page */
+
 .postTextBox {
 	position: relative;
 	text-align: : left;
@@ -249,7 +270,9 @@ hr {
 	color: #dfdfdf;
 }
 
+
 /* Contacts Form */
+
 .formContainer {
 	margin-top: 135px;
 	margin-left: 25%;
@@ -278,7 +301,7 @@ hr {
 	background-color: none;
 	border-radius: 5px;
 }
- 
+
 .formContainer textarea {
 	font-family: 'Share Tech Mono', monospace, Arial;
 	border: 1px solid #6A8E7A;
@@ -286,13 +309,13 @@ hr {
 }
 
 .formContainer input:-moz-placeholder {
-    color: #666;
-    font-family: 'Share Tech Mono', monospace, Arial;
+	color: #666;
+	font-family: 'Share Tech Mono', monospace, Arial;
 }
 
 .formContainer input::-webkit-input-placeholder {
-    color: #666;
-    font-family: 'Share Tech Mono', monospace, Arial;
+	color: #666;
+	font-family: 'Share Tech Mono', monospace, Arial;
 }
 
 footer {
@@ -310,103 +333,112 @@ footer p {
 	font-family: 'Share Tech Mono', monospace, Arial;
 	font-size: 1em;
 }
+
+
 /* Login Popup */
+
+
 /* Mask for background, by default is not display */
+
 #mask {
-    display: none;
-    background: #000;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-    z-index: 75;
+	display: none;
+	background: #000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+	z-index: 75;
 }
 
+
 /* You can customize to your needs  */
+
 .login-popup {
-    display: none;
-    background: #4E453E;
-    padding: 10px;
-    border: 1px solid #6A8E7A;
-    float: left;
-    font-family: 'Share Tech Mono', monospace, Arial;
+	display: none;
+	background: #4E453E;
+	padding: 10px;
+	border: 1px solid #6A8E7A;
+	float: left;
+	font-family: 'Share Tech Mono', monospace, Arial;
 	font-size: 1.2em;
 	color: #dfdfdf;
 	text-shadow: 4px 4px 5px #222;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 100;
-    box-shadow: 0px 0px 20px #222;
-    /* CSS3 */
-    -moz-box-shadow: 0px 0px 20px #222;
-    /* Firefox */
-    -webkit-box-shadow: 0px 0px 20px #222;
-    /* Safari, Chrome */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 100;
+	box-shadow: 0px 0px 20px #222;
+	/* CSS3 */
+	-moz-box-shadow: 0px 0px 20px #222;
+	/* Firefox */
+	-webkit-box-shadow: 0px 0px 20px #222;
+	/* Safari, Chrome */
 	border-radius: 3px 3px 3px 3px;
-    -moz-border-radius: 3px;
-    /* Firefox */
-    -webkit-border-radius: 3px;
-    /* Safari, Chrome */;
+	-moz-border-radius: 3px;
+	/* Firefox */
+	-webkit-border-radius: 3px;
+	/* Safari, Chrome */
+	;
 }
 
 .close {
 	float: right;
-    margin: -34px -14px 0 0;
-    border: none;
+	margin: -34px -14px 0 0;
+	border: none;
 }
 
 fieldset {
-    border: none;
+	border: none;
 }
 
 form.signin .textbox label {
-    display: block;
-    padding-bottom: 7px;
+	display: block;
+	padding-bottom: 7px;
 }
 
 form.signin .textbox span {
-    display: block;
+	display: block;
 }
 
-form.signin p, form.signin span {
-    color: #dfdfdf;
-    font-size: .8em;
+form.signin p,
+form.signin span {
+	color: #dfdfdf;
+	font-size: .8em;
 }
 
 form.signin .textbox input {
-    background: #ddd;
-    border: 1px solid #6A8E7A;
-    color: #222;
-    border-radius: 3px 3px 3px 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    font-family: 'Share Tech Mono', monospace, Arial;
-    padding: 6px 6px 4px;
-    width: 200px;
+	background: #ddd;
+	border: 1px solid #6A8E7A;
+	color: #222;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	padding: 6px 6px 4px;
+	width: 200px;
 }
 
 form .signin input:-moz-placeholder {
-    color: #666;
-    font-family: 'Share Tech Mono', monospace, Arial;
+	color: #666;
+	font-family: 'Share Tech Mono', monospace, Arial;
 }
 
 form .signin input::-webkit-input-placeholder {
-    color: #666;
-    font-family: 'Share Tech Mono', monospace, Arial;
+	color: #666;
+	font-family: 'Share Tech Mono', monospace, Arial;
 }
 
 .button {
 	margin-top: 10px;
 	border: 1px solid #6A8E7A;
 	border-radius: 10px;
-    cursor: pointer;
-    display: inline-block;
-    padding: 6px 6px 4px;
-    font-family: 'Share Tech Mono', monospace, Arial;
+	cursor: pointer;
+	display: inline-block;
+	padding: 6px 6px 4px;
+	font-family: 'Share Tech Mono', monospace, Arial;
 	text-decoration: none;
 	color: #dfdfdf;
 	text-shadow: 4px 4px 5px #222;

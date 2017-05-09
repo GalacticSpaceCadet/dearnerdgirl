@@ -1,134 +1,149 @@
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require("body-parser");
-var methodOverride = require('method-override');
-var session = require('express-session');
+'use strict';
 
-var express = require('express'),
-    http = require('http'),
-    passport = require('passport'),
-    util = require('util'),
-    LinkedInStrategy = require('passport-linkedin').Strategy;
+const express = require('express');
+const methodOverride = require('method-override');
+const compression = require('compression');
+const app = express();
+app.set('x-powered-by', false);
+app.set('etag', false);
 
-var app = express();
+const server = require('http').Server(app);
+const path = require('path');
+const _ = require('lodash');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const queryString = require('querystring');
 
-// configure Express
-app.set('port', process.env.PORT || 3000);
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-app.use(logger("dev"));
-app.use(cookieParser());
-app.use(bodyParser.urlencoded({
-    extended: false
+app.use(compression());
+app.use(cookieParser('i-am-a-little-teapot', {
+    httpOnly: true,
+    maxAge: 60 * 60 * 24 * 365
 }));
+app.use(bodyParser.json());
 app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(methodOverride('X-HTTP-Method'));
 app.use(methodOverride('X-Method-Override'));
 
-app.use(session({
-    secret: 'keyboard cat',
-    resave: false,
-    saveUninitialized: true
-}));
-// Initialize Passport!  Also use passport.session() middleware, to support
-// persistent login sessions (recommended).
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(express.static(__dirname + '/public'));
 
-var LINKEDIN_API_KEY = "78zljd9fwqnq74";
-var LINKEDIN_SECRET_KEY = "sqYdBFgV8TpCnXN2";
+// configure Express
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
 
-// Passport session setup.
-//   To support persistent login sessions, Passport needs to be able to
-//   serialize users into and deserialize users out of the session.  Typically,
-//   this will be as simple as storing the user ID when serializing, and finding
-//   the user by ID when deserializing.  However, since this example does not
-//   have a database of user records, the complete LinkedIn profile is
-//   serialized and deserialized.
-passport.serializeUser(function(user, done) {
-    done(null, user);
+app.use('/public', express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/views'));
+
+const port = process.env.PORT || 3000;
+const md5 = require('md5');
+
+app.get('/health', (req, res) => {
+    res.json({
+        status: 'ok'
+    });
 });
 
-passport.deserializeUser(function(obj, done) {
-    done(null, obj);
-});
+const db = require('./db');
 
+app.post('/register', async(req, res) => {
 
-// Use the LinkedInStrategy within Passport.
-//   Strategies in passport require a `verify` function, which accept
-//   credentials (in this case, a token, tokenSecret, and LinkedIn profile), and
-//   invoke a callback with a user object.
-passport.use(new LinkedInStrategy({
-        consumerKey: LINKEDIN_API_KEY,
-        consumerSecret: LINKEDIN_SECRET_KEY,
-        // NOTE: I have to access the site via 127.0.0.1:3000, NOT via localhost, and this whould be changed once I deploy.
-        callbackURL: "http://127.0.0.1:3000/auth/linkedin/callback"
-    },
-    function(token, tokenSecret, profile, done) {
-        // asynchronous verification, for effect...
-        process.nextTick(function() {
-            // To keep the example simple, the user's LinkedIn profile is returned to
-            // represent the logged-in user.  In a typical application, you would want
-            // to associate the LinkedIn account with a user record in your database,
-            // and return that user instead.
-            return done(null, profile);
+    if (_.isNil(req.body.username)) {
+        return res.status(409).json({
+            status: 'must include a username'
         });
     }
-));
 
-app.get('/', function(req, res) {
-    res.render('index', { user: req.user });
+    if (_.isNil(req.body.password)) {
+        return res.status(409).json({
+            status: 'must include a password'
+        });
+    }
+
+    req.body.password = md5(req.body.password);
+
+    res.json(await db.insertOne('users', req.body));
 });
 
-app.get('/account', ensureAuthenticated, function(req, res) {
-    res.render('account', { user: req.user });
-});
+app.get('/diaries', async(req, res) => {
+    return res.json(await db.find('diaries'));
+})
 
-app.get('/login', function(req, res) {
-    res.render('login', { user: req.user });
-});
+app.get('/authcheck', [basicAuth, (req, res) => {
+    res.json({
+        status: 'ok'
+    });
+}])
 
-// GET /auth/linkedin
-//   Use passport.authenticate() as route middleware to authenticate the
-//   request.  The first step in LinkedIn authentication will involve
-//   redirecting the user to linkedin.com.  After authorization, LinkedIn will
-//   redirect the user back to this application at /auth/linkedin/callback
-app.get('/auth/linkedin',
-    passport.authenticate('linkedin'),
-    function(req, res) {
-        // The request will be redirected to LinkedIn for authentication, so this
-        // function will not be called.
+async function basicAuth(req, res, next) {
+
+    if (_.isNil(req.headers.authorization)) {
+        return res.status(401).json({
+            status: 'authorization header required'
+        })
+    }
+
+    let authHeader = req.headers.authorization;
+    let parts = authHeader.split(' ');
+    let scheme = parts[0];
+    let hash = parts[1];
+
+    if ((scheme || '').toLowerCase() !== 'basic') {
+        return res.status(401).json({
+            status: 'only basic auth supported'
+        });
+    }
+
+    if (_.isNil(hash)) {
+        return res.status(401).json({
+            status: 'username and password must be supplied'
+        });
+    }
+
+    let plain = Buffer.from(hash, 'base64').toString('utf-8');
+    let userParts = plain.split(':');
+    let username = userParts[0];
+    let password = userParts[1];
+
+    if (_.isNil(username)) {
+        return res.status(401).json({
+            status: 'username must be supplied'
+        });
+    }
+
+    if (_.isNil(password)) {
+        return res.status(401).json({
+            status: 'password must be supplied'
+        });
+    }
+
+    let dbUsers = await db.find('users', {
+        username: username
     });
 
-// GET /auth/linkedin/callback
-//   Use passport.authenticate() as route middleware to authenticate the
-//   request.  If authentication fails, the user will be redirected back to the
-//   login page.  Otherwise, the primary route function function will be called,
-//   which, in this example, will redirect the user to the home page.
-app.get('/auth/linkedin/callback',
-    passport.authenticate('linkedin', { failureRedirect: '/login' }),
-    function(req, res) {
-        res.redirect('/');
-    });
+    if (_.isEmpty(dbUsers)) {
+        return res.status(401).json({
+            status: 'incorrect username provided'
+        });
+    }
 
-app.get('/logout', function(req, res) {
-    req.logout();
-    res.redirect('/');
-});
+    let dbPassword = _.result(dbUsers, '0.password');
 
-http.createServer(app).listen(app.get('port'), function() {
-    console.log('Express server listening on port ' + app.get('port'));
-});
+    if (_.isEmpty(dbPassword)) {
+        return res.status(401).json({
+            status: 'no password known for specified username'
+        });
+    }
 
+    let isValid = md5(password) === dbPassword;
 
-// Simple route middleware to ensure user is authenticated.
-//   Use this route middleware on any resource that needs to be protected.  If
-//   the request is authenticated (typically via a persistent login session),
-//   the request will proceed.  Otherwise, the user will be redirected to the
-//   login page.
-function ensureAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) {
-        return next(); }
-    res.redirect('/login');
+    if (!isValid) {
+        return res.status(401).json({
+            status: 'password incorrect'
+        });
+    }
+
+    next();
 }
+
+
+server.listen(port, () => {
+    console.log(`listening on ${port}`);
+});

@@ -1,13 +1,20 @@
 {
   "name": "passport-linkedin-examples-login",
   "version": "0.0.0",
+  "scripts": {
+    "start": "npm run server.js"
+  },
   "dependencies": {
     "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
     "cookie-parser": "^1.4.3",
     "ejs": ">= 0.0.0",
     "express": ">= 0.0.0",
     "express-session": "^1.15.2",
+    "lodash": "^4.17.4",
+    "md5": "^2.2.1",
     "method-override": "^2.3.8",
+    "mongodb": "^2.2.26",
     "morgan": "^1.8.1",
     "passport": ">= 0.0.0",
     "passport-linkedin": ">= 0.0.0"
