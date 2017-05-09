@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	</head>
+	<header>
+		<img src="assets/images/flower.jpg" class="flower">
+		<a href="index.html"><h1 class="logo"> Dear nerdGirl</h1></a>
+		<div class="navbar">
+			<P>
+				<a href="#login-box" class="login-window">Login</a> |
+				<a href="diaries.html">Diaries</a> | 
+				<a href="contact.html">Contact</a>
+			</P>
+		</div>
+	</header>
+	<body>
+		<div class="mainContainer">
+			<div class="userDiary">				
+				<div class="userImage"></div>
+				<h2 class="userName"></h2>
+				<p class="userPost"></p>
+			</div>
+			<div class="userDiary">
+				<div class="userImage"></div>
+				<p></p>
+				<h2></h2>
+			</div>
+			<div class="userDiary">
+				<div class="userImage"></div>
+				<p></p>
+				<h2></h2>
+			</div>
+		</div>
+		<div id="login-box" class="login-popup">
+			<a href="#" class="close">Close</a>
+		  	<form method="post" class="signin" action="#">
+		        <fieldset class="textbox">
+			        <label class="username">
+				        <span>LinkedIn</span>
+				        <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Username">
+			        </label>
+			        <label class="password">
+				        <span>Password</span>
+				        <input id="password" name="password" value="" type="password" placeholder="Password">
+			        </label>
+			        <button class="submit button" type="button">Sign in</button>
+			        <p>
+			        <a class="forgot" href="#">Forgot your password?</a>
+			        </p>        
+		        </fieldset>
+		  	</form>
+		</div>
+	</body>
+	<footer>
+		<p>&copy; Dear, Nerd Girl 2017</p>
+	</footer>
+	<script>
+		$(document).ready(function() {
+		$('a.login-window').click(function() {
+    
+            //Getting the variable's value from a link 
+	    var loginBox = $(this).attr('href');
+	    //Fade in the Popup
+	    $(loginBox).fadeIn(300);
+	    
+	    //Set the center alignment padding + border see css style
+	    var popMargTop = ($(loginBox).height() + 24) / 2; 
+	    var popMargLeft = ($(loginBox).width() + 24) / 2; 
+	    
+	    $(loginBox).css({ 
+	        'margin-top' : -popMargTop,
+	        'margin-left' : -popMargLeft
+	    });
+	    
+	    // Add the mask to body
+	    $('body').append('<div id="mask"></div>');
+	    $('#mask').fadeIn(300);
+	    
+	    return false;
+		});
+		// When clicking on the button close or the mask layer the popup closed
+		$('a.close, #mask').live('click', function() { 
+		  $('#mask , .login-popup').fadeOut(300 , function() {
+		    $('#mask').remove();  
+		}); 
+		return false;
+		});
+		});
+	</script>
+</html>
