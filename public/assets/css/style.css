@@ -12,7 +12,6 @@ header {
 	left: 0px;
 	margin: auto;
 	border-bottom: 2px solid #6A8E7A;
-/* Box Shadow */
 	-webkit-box-shadow: -14px 29px 66px -6px #222;
 	-moz-box-shadow: -14px 29px 66px -6px #222;
 	box-shadow: -14px 29px 66px -6px #222;
@@ -20,11 +19,10 @@ header {
 
 .logo {
 	color: #dfdfdf;
-	margin-top: 10px;
+	margin-top: 13px;
 	display: inline-block;
 	font-family: 'Share Tech Mono', monospace, Arial;
 	font-size: 2.2em;
-	width: 267px;
 }
 
 .flower {
@@ -41,7 +39,7 @@ header .navbar {
 	position: relative;
 	display: inline-block;
 	margin-right: 90px;
-	margin-top: -5px;
+	margin-top: 20px;
 }
 
 .navbar a {
@@ -73,20 +71,12 @@ body {
 
 .statement {
 	position: relative;
-	height: 150px;
+	min-height: 150px;
 	width: 70vw;
-	/*background-color: #222;*/
 	margin: 0 auto;
 	top: 50px;
 	border: 1px solid #6A8E7A;
 	border-radius: 20px;
-/*/* Gradient Background */
-/*	background: #ddd;*/ /* For browsers that do not support gradients */
-/*	background: -webkit-linear-gradient(left top, #ddd, #6A8E7A);*/ /* For Safari 5.1 to 6.0 */
-/*	background: -o-linear-gradient(bottom right, #ddd, #6A8E7A); *//* For Opera 11.1 to 12.0 */
-/*	background: -moz-linear-gradient(bottom right, #ddd, #6A8E7A); *//* For Firefox 3.6 to 15 */
-/*	background: linear-gradient(to bottom right, #ddd, #6A8E7A);*/ /* Standard syntax */
-/* Box Shadow */
 	-webkit-box-shadow: -14px 29px 66px -6px #222;
 	-moz-box-shadow: -14px 29px 66px -6px #222;
 	box-shadow: -14px 29px 66px -6px #222;
@@ -94,6 +84,8 @@ body {
 }
 
 .statement h2 {
+	margin-top: 14px;
+	margin-bottom: 14px;
 	font-family: 'Share Tech Mono', monospace, Arial;
 	color: #ddd;
 	font-size: 1.8em;
@@ -127,13 +119,6 @@ hr {
 	border: 1px solid #6A8E7A;
 	display: inline-block;
 	border-radius: 20px;
-/* Gradient Background */
-/*	background: #ddd;*/ /* For browsers that do not support gradients */
-/*	background: -webkit-linear-gradient(left top, #ddd, #6A8E7A);*/ /* For Safari 5.1 to 6.0 */
-/*	background: -o-linear-gradient(bottom right, #ddd, #6A8E7A);*/ /* For Opera 11.1 to 12.0 */
-/*	background: -moz-linear-gradient(bottom right, #ddd, #6A8E7A);*/ /* For Firefox 3.6 to 15 */
-/*	background: linear-gradient(to bottom right, #ddd, #6A8E7A);*/ /* Standard syntax */
-/* Box Shadow */
 	-webkit-box-shadow: -14px 29px 66px -6px #222;
 	-moz-box-shadow: -14px 29px 66px -6px #222;
 	box-shadow: -14px 29px 66px -6px #222;
@@ -147,24 +132,24 @@ hr {
 #left {
     float:left;
     min-width: 25%;
-    margin-left: 100px;
-    margin-right: 10px;	
+    margin-left: 60px;
+    margin-right: 5px;	
     min-height: 275px;
 }
 
 #center {
     margin: 0 auto;
     min-width: 25%;
-	margin-left: 10px;
-    margin-right: 10px;
+	margin-left: 5px;
+    margin-right: 5px;
     min-height: 275px;
 }
 
 #right {
     float:right;
     min-width: 25%;
-    margin-right: 100px;
-    margin-left: 10px;
+    margin-right: 60px;
+    margin-left: 15px;
     min-height: 275px;
 }
 
@@ -179,13 +164,6 @@ hr {
 	top: 50px;
 	border: 1px solid #6A8E7A;
 	border-radius: 20px;
-/*/* Gradient Background */
-/*	background: #ddd;*/ /* For browsers that do not support gradients */
-/*	background: -webkit-linear-gradient(left top, #ddd, #6A8E7A);*/ /* For Safari 5.1 to 6.0 */
-/*	background: -o-linear-gradient(bottom right, #ddd, #6A8E7A); *//* For Opera 11.1 to 12.0 */
-/*	background: -moz-linear-gradient(bottom right, #ddd, #6A8E7A); *//* For Firefox 3.6 to 15 */
-/*	background: linear-gradient(to bottom right, #ddd, #6A8E7A);*/ /* Standard syntax */
-/* Box Shadow */
 	-webkit-box-shadow: -14px 29px 66px -6px #222;
 	-moz-box-shadow: -14px 29px 66px -6px #222;
 	box-shadow: -14px 29px 66px -6px #222;
@@ -295,8 +273,20 @@ hr {
     font-family: 'Share Tech Mono', monospace, Arial;
 }
 
+#submitBtn {
+	font-size: 1em;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	text-decoration: none;
+	color: #dfdfdf;
+	border: 1px solid #6A8E7A;
+	border-radius: 10px;
+    cursor: pointer;
+    padding: 6px 6px 4px;
+}
+
 footer {
 	position: fixed;
+	height: 35px;
 	width: 100vw;
 	background-color: #423a33;
 	text-align: center;
@@ -306,6 +296,7 @@ footer {
 }
 
 footer p {
+	margin-top: 10px;
 	color: #dfdfdf;
 	font-family: 'Share Tech Mono', monospace, Arial;
 	font-size: 1em;
@@ -401,6 +392,7 @@ form .signin input::-webkit-input-placeholder {
 
 .button {
 	margin-top: 10px;
+	margin-bottom: 10px;
 	border: 1px solid #6A8E7A;
 	border-radius: 10px;
     cursor: pointer;
@@ -419,3 +411,176 @@ form .signin input::-webkit-input-placeholder {
 	text-decoration: none;
 	color: #dfdfdf;
 }
+
+
+/*====================Media Queries=========================*/
+
+
+@media screen and (max-width: 960px) {
+
+	header {
+		height: 60px;
+	}
+
+	.logo {
+		margin-top: 17px;
+		font-size: 2em;
+	}
+
+	.flower {
+		height: 160px;
+		width: 160px;
+		margin-left: 35px;
+	}
+
+	header .navbar {
+		margin-right: 50px;
+		margin-top: 20px;
+	}
+
+	.navbar a {
+		font-size: .8em;
+	}
+
+	.navbar p {
+		font-size: 1.5em;
+	}
+
+	.statement {
+		min-height: 125px;
+		width: 70vw;
+		top: 50px;
+	}
+
+	.statement h2 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 1.4em;
+		padding-top: -10px;
+		padding-bottom: -10px;
+	}
+
+	.statement p {
+		font-size: .8em;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+
+		header {
+		height: 50px;
+	}
+
+	.logo {
+		margin-top: 13px;
+		font-size: 1.7em;
+	}
+
+	.flower {
+		height: 120px;
+		width: 120px;
+		margin-left: 25px;
+	}
+
+	header .navbar {
+		margin-right: 45px;
+		margin-top: 16px;
+	}
+
+	.navbar a {
+		font-size: .9em;
+	}
+
+	.navbar p {
+		font-size: .9em;
+	}
+
+	.statement {
+		min-height: 115px;
+		width: 70vw;
+		top: 35px;
+	}
+
+	.statement h2 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 1.2em;
+		padding-top: -10px;
+		padding-bottom: -10px;
+	}
+
+	.statement p {
+		font-size: .7em;
+	}
+
+	footer {
+		height: 30px;
+		font-size: .9em;
+	}
+
+	footer p {
+		margin-top: 10px;
+		font-size: .8em;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	header {
+		height: 45px;
+	}
+
+	.logo {
+		margin-top: 11px;
+		font-size: 1.5em;
+	}
+
+	.flower {
+		height: 105px;
+		width: 105px;
+		margin-left: 20px;
+	}
+
+	header .navbar {
+		margin-right: 35px;
+		margin-top: 14px;
+	}
+
+	.navbar a {
+		font-size: .9em;
+	}
+
+	.navbar p {
+		font-size: .9em;
+	}
+
+	.statement {
+		min-height: 105px;
+		width: 70vw;
+		top: 25px;
+	}
+
+	.statement h2 {
+		margin-top: 8px;
+		margin-bottom: 8px;
+		font-size: 1em;
+		padding-top: -10px;
+		padding-bottom: -10px;
+	}
+
+	.statement p {
+		font-size: .7em;
+	}
+
+		footer {
+		height: 25px;
+		font-size: .9em;
+	}
+
+	footer p {
+		margin-top: 8px;
+		font-size: .7em;
+	}
+}
+

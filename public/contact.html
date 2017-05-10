@@ -4,12 +4,12 @@
 		<title></title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-		<link rel="stylesheet" type="text/css" href="../public/assets/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	</head>
 	<header>
-		<img src="../public/assets/images/flower.jpg" class="flower">
+		<img src="assets/images/flower.jpg" class="flower">
 		<a href="index.html"><h1 class="logo"> Dear nerdGirl</h1></a>
 		<div class="navbar">
 			<P>
@@ -20,17 +20,19 @@
 		</div>
 	</header>
 	<body>
-		<div class="mainContainer">
-			<div class="statement">
-				<h2>Mission Statement</h2>
-				<hr>
-				<p></p>
-			</div>
-			<div class="contentContainer" id="postContainer">
-				<div class="postBox" id="left"></div>
-				<div class="postBox" id="center"></div>
-				<div class="postBox" id="right"></div>
-			</div>
+		<div class="formContainer">
+			<form method="post" action="../index.php">
+				<label>Name</label><br>
+	  			<input type="text" name="name" class="formInput"><br><br>
+	  			<label>Email</label><br>
+	  			<input type="text" name="email" class="formInput"><br><br>
+	  			<label>LinkedIn</label><br>
+	  			<input type="text" name="linkedIn" class="formInput"><br><br>
+	  			<form>Comments/Questions<br>
+				<textarea name='comment' class='comment'></textarea>
+				<br><br>
+				<a type="submit" class="submitBtn">Submit</a>
+			</form><br><br>			
 		</div>
 		<div id="login-box" class="login-popup">
 			<a href="#" class="close">Close</a>
@@ -46,14 +48,14 @@
 			        </label>
 			        <button class="submit button" type="button">Sign in</button>
 			        <p>
-			        <a class="forgot" href="#">Forgot your password?</a>
+			        <input id="submitBtn" name="submit" type="submit" value="Submit">
 			        </p>        
 		        </fieldset>
 		  	</form>
-		</div>
+		</div>	
 	</body>
 	<footer>
-		<p>&copy; Dear, Nerd Girl 2017</p>
+		<p>&copy; Dear nerdGirl 2017</p>
 	</footer>
 	<script>
 		$(document).ready(function() {
@@ -91,4 +93,3 @@
 		});
 	</script>
 </html>
-
