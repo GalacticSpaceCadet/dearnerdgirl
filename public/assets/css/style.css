@@ -75,7 +75,7 @@ body {
 	width: 70vw;
 	margin: 0 auto;
 	top: 50px;
-	border: 1px solid #6A8E7A;
+	border: 2px solid #6A8E7A;
 	border-radius: 20px;
 	-webkit-box-shadow: -14px 29px 66px -6px #222;
 	-moz-box-shadow: -14px 29px 66px -6px #222;
@@ -105,7 +105,7 @@ body {
 hr {
 	width: 90%;
     border: 0;
-    height: 1px;
+    height: 2px;
     background-image: linear-gradient(to right, #6A8E7A, #ddd, #6A8E7A);
 }
 
@@ -116,7 +116,7 @@ hr {
 
 .postBox {
 	position: relative;
-	border: 1px solid #6A8E7A;
+	border: 2px solid #6A8E7A;
 	display: inline-block;
 	border-radius: 20px;
 	-webkit-box-shadow: -14px 29px 66px -6px #222;
@@ -153,79 +153,84 @@ hr {
     min-height: 275px;
 }
 
-/* Diaries Page */
+/* Personal Diaries */
 
-.userDiary {
-	position: relative;
-	min-height: 150px;
-	width: 70vw;
-	/*background-color: #222;*/
-	margin: 0 auto 20px auto;
-	top: 50px;
-	border: 1px solid #6A8E7A;
-	border-radius: 20px;
-	-webkit-box-shadow: -14px 29px 66px -6px #222;
-	-moz-box-shadow: -14px 29px 66px -6px #222;
-	box-shadow: -14px 29px 66px -6px #222;
-	color: #ddd;
+.cmsContainer {
+	margin-top: 125px;
 }
 
-.userDiary h2 {
-	position: relative;
-	display: inline-block;
-	clear: both;
-	float: left;
-	font-family: 'Share Tech Mono', monospace, Arial;
-	color: #ddd;
-	font-size: 1em;
-	text-align: center;
+#cms select {
+	color: #dfdfdf;
+	background-color: transparent;
+	width: 21px;
 	text-shadow: 4px 4px 5px #222;
-	margin-left: 25px;
-	margin-top: 6px;
-	clear: both;
+	color: #dfdfdf;
+	font-size: .8em;
+	background-color: transparent;
+	border: 2px solid #dfdfdf;
+	border-radius: 5px;
+	text-shadow: 4px 4px 5px #222;
+	padding: 5px;
 }
 
-.userDiary .userPost {
+#cms form {
+	margin-top: 100px;
+}
+
+#cms .titleField {
 	font-family: 'Share Tech Mono', monospace, Arial;
-	font-size: 1em;
+	font-size: 1.4em;
 	color: #dfdfdf;
 	text-shadow: 4px 4px 5px #222;
+	text-align: left;
 }
 
-.userImage {
-	position: relative;
-	float: left;
-	display: inline-block;
-	height: 100px;
-	width: 100px;
-	border: 1px solid #6A8E7A;
-	border-radius: 10px;
-	margin-top: 12px;
-	margin-left: 20px;
-	padding-bottom: 3px;
-}
-
-/* Post Page */
-.postTextBox {
-	position: relative;
-	text-align: : left;
-	height: 150px;
-	width: 80%;
-	margin-top: 10px;
-	margin-bottom: 15px;
+#cms input {
+	height: 1.5em;
+	width: 50%;
 	font-family: 'Share Tech Mono', monospace, Arial;
 	border: 1px solid #6A8E7A;
 	border-radius: 5px;
 }
 
-.submitPost {
-	position: relative;
-	text-align: center;
+#cms textarea {
+	height: 30vh;
+	width: 70%;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	border: 2px solid #6A8E7A;
+	border-radius: 5px;
+}
+
+.cmsContainer .submitBtn {
 	font-family: 'Share Tech Mono', monospace, Arial;
 	text-decoration: none;
-	font-size: 1.5em;
 	color: #dfdfdf;
+	font-size: 1.2em;
+	background-color: transparent;
+	border: 2px solid #6A8E7A;
+	border-radius: 5px;
+	text-shadow: 4px 4px 5px #222;
+	padding: 5px;
 }
+
+/* Blog Diaries Page */
+.blogContainer {
+	margin-top: 135px;
+}
+
+.blogContainer .submitBtn {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	text-decoration: none;
+	color: #dfdfdf;
+	font-size: 1.2em;
+	background-color: transparent;
+	border: 2px solid #6A8E7A;
+	border-radius: 5px;
+	text-shadow: 4px 4px 5px #222;
+	padding: 5px;
+	margin-right: 10px;
+}
+
 
 /* Contacts Form */
 .formContainer {
@@ -252,14 +257,14 @@ hr {
 
 .formContainer input {
 	font-family: 'Share Tech Mono', monospace, Arial;
-	border: 1px solid #6A8E7A;
+	border: 2px solid #6A8E7A;
 	background-color: none;
 	border-radius: 5px;
 }
  
 .formContainer textarea {
 	font-family: 'Share Tech Mono', monospace, Arial;
-	border: 1px solid #6A8E7A;
+	border: 2px solid #6A8E7A;
 	border-radius: 5px;
 }
 
@@ -273,15 +278,16 @@ hr {
     font-family: 'Share Tech Mono', monospace, Arial;
 }
 
-#submitBtn {
+.formContainer .submitBtn {
 	font-size: 1em;
 	font-family: 'Share Tech Mono', monospace, Arial;
 	text-decoration: none;
 	color: #dfdfdf;
-	border: 1px solid #6A8E7A;
+	border: 2px solid #6A8E7A;
 	border-radius: 10px;
     cursor: pointer;
     padding: 6px 6px 4px;
+    background: transparent;
 }
 
 footer {
@@ -321,7 +327,7 @@ footer p {
     display: none;
     background: #4E453E;
     padding: 10px;
-    border: 1px solid #6A8E7A;
+    border: 2px solid #6A8E7A;
     float: left;
     font-family: 'Share Tech Mono', monospace, Arial;
 	font-size: 1.2em;
@@ -370,7 +376,7 @@ form.signin p, form.signin span {
 
 form.signin .textbox input {
     background: #ddd;
-    border: 1px solid #6A8E7A;
+    border: 2px solid #6A8E7A;
     color: #222;
     border-radius: 3px 3px 3px 3px;
     -moz-border-radius: 3px;
@@ -393,7 +399,7 @@ form .signin input::-webkit-input-placeholder {
 .button {
 	margin-top: 10px;
 	margin-bottom: 10px;
-	border: 1px solid #6A8E7A;
+	border: 2px solid #6A8E7A;
 	border-radius: 10px;
     cursor: pointer;
     display: inline-block;

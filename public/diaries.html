@@ -20,13 +20,11 @@
 		</div>
 	</header>
 	<body>
-		<div class="mainContainer">
-			<div class="userDiary">			
-				<div class="userImage"></div>
-				<h2 class="userName"></h2>
-				<p class="userPost"></p>
+		<div class="mainContainer">	
+			<div class="blogContainer">
+			<a class="submitBtn" href="/cms">New Post</a>
+			<a class="submitBtn" href="/authors">Manage Authors</a>
 			</div>
-			
 		</div>
 		<div id="login-box" class="login-popup">
 			<a href="#" class="close">Close</a>
@@ -51,39 +49,6 @@
 	<footer>
 		<p>&copy; Dear nerdGirl 2017</p>
 	</footer>
-	<script>
-		$(document).ready(function() {
-		$('a.login-window').click(function() {
-    
-        //Getting the variable's value from a link 
-	    var loginBox = $(this).attr('href');
-
-	    //Fade in the Popup
-	    $(loginBox).fadeIn(300);
-	    
-	    //Set the center alignment padding + border see css style
-	    var popMargTop = ($(loginBox).height() + 24) / 2; 
-	    var popMargLeft = ($(loginBox).width() + 24) / 2; 
-	    
-	    $(loginBox).css({ 
-	        'margin-top' : -popMargTop,
-	        'margin-left' : -popMargLeft
-	    });
-	    
-	    // Add the mask to body
-	    $('body').append('<div id="mask"></div>');
-	    $('#mask').fadeIn(300);
-	    
-	    return false;
-		});
-
-		// When clicking on the button close or the mask layer the popup closed
-		$('a.close, #mask').live('click', function() { 
-		  $('#mask , .login-popup').fadeOut(300 , function() {
-		    $('#mask').remove();  
-		}); 
-		return false;
-		});
-		});
-	</script>
+	<script src="js/cms.js" type="text/javascript"></script>
+	<script src="login.js"></script>
 </html>
