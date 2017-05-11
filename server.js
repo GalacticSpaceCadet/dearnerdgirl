@@ -6,6 +6,9 @@ var bodyParser = require("body-parser");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
+// Requiring our models for syncing
+var db = require("./models");
+
 //Adding body parser so the data can be interpreted
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -20,9 +23,11 @@ app.use(express.static("./public"));
 //IE("./app/routing/htmlRoutes")(app);
 
 
-//Listner will now start the server
-app.listen(PORT, function() {
-console.log("App listening on PORT: " + PORT);
+//Listner will now start the server and sync with
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });
 
 
