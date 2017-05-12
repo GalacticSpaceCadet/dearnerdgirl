@@ -14,11 +14,11 @@ module.exports = function(sequelize, DataTypes) {
     }
   },
     {
-      // We're saying that we want our Nerdgirl to have Posts
+      // We're saying that we want our Author to have Posts
       classMethods: {
         associate: function(models) {
-          // A nerdgirl (foreignKey) is required or a Post can't be made
-          Post.belongsTo(models.Nerdgirl, {
+          // An Author (foreignKey) is required or a Post can't be made
+          Post.belongsTo(models.Author, {
             foreignKey: {
               allowNull: false
             }

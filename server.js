@@ -18,16 +18,16 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Static directory
 app.use(express.static("./public"));
 
-//Bellow we point the server to route files.
-// Mapping where it needs to retrieve and send data.
-//IE("./app/routing/htmlRoutes")(app);
+require("./routes/author-api-routes.js")(app);
+require("./routes/diaries-api-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
-
-//Listner will now start the server and sync with
+// Syncing our sequelize models and then starting our express app
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+
 
 
