@@ -231,6 +231,27 @@ hr {
 	margin-right: 10px;
 }
 
+.authorInput {
+	margin-top: 100px;
+	height: 1.5em;
+	width: 50%;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	border: 1px solid #6A8E7A;
+	border-radius: 5px;
+}
+
+.createAuthor .submitBtn {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	text-decoration: none;
+	color: #dfdfdf;
+	font-size: 1em;
+	background-color: transparent;
+	border: 2px solid #6A8E7A;
+	border-radius: 5px;
+	text-shadow: 4px 4px 5px #222;
+	padding: 5px;
+}
+
 
 /* Contacts Form */
 .formContainer {
