@@ -4,7 +4,7 @@
     "password": null,
     "database": "blogger",
     "host": "localhost",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "test": {
     "username": "root",
