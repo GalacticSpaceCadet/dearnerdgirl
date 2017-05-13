@@ -14,9 +14,13 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/cms.html"));
   });
 
-  // blog route loads blog.html
-  app.get("/diaries", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/diaries.html"));
+  // blog route loads frontblog.html which will show site visitor noneditable version
+  app.get("/frontblog", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/frontblog.html"));
+  });
+//gets the editable blog route for editable content
+    app.get("/blog", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/blog.html"));
   });
 
   // authors route loads author-manager.html
