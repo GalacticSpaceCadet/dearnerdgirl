@@ -59,7 +59,7 @@ $(document).ready(function() {
   // Submits a new post and brings user to blog page upon completion
   function submitPost(post) {
     $.post("/api/posts", post, function() {
-      window.location.href = "/diaries";
+      window.location.href = "/blog";
     });
   }
 
@@ -128,7 +128,7 @@ $(document).ready(function() {
       data: post
     })
     .done(function() {
-      window.location.href = "/diaries";
+      window.location.href = "/blog";
     });
   }
 });

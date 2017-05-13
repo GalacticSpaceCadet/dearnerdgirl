@@ -120,6 +120,15 @@ hr {
     margin-right: 5px;  
     min-height: 275px;
 }
+#nerd1{
+   object-fit: contain;
+}
+#nerd2{
+   object-fit: contain;
+}
+#nerd3{
+   object-fit: contain;
+}
 #center {
     margin: 0 auto;
     min-width: 25%;
@@ -537,4 +546,10 @@ form .signin input::-webkit-input-placeholder {
         margin-top: 8px;
         font-size: .7em;
     }
+/*frontblog dynamic css*/
+     #blogContainer{
+        width: 500px;
+        height:200px ;
+        float: right;
+     }
 }

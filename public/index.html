@@ -26,29 +26,40 @@
         <div class="statement">
             <h2>Mission Statement</h2>
             <hr>
-            <p></p>
+           <!--  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. </p> -->
+            <!-- <p></p> -->
         </div>
         <div class="contentContainer" id="postContainer">
-            <div class="postBox" id="left"></div>
-            <div class="postBox" id="center"></div>
-            <div class="postBox" id="right"></div>
+            
+            <div class="postBox" id="left">
+                <a href="/frontblog?author_id=1" ">
+                    <img src="assets/images/nerdgirltemp.jpg" width="100" height="100" id="nerd1 ">
+            </div>
+            <div class="postBox " id="center">
+                <a href="/frontblog?author_id=2 "">
+                    <img src="assets/images/nerdgirltemp.jpg" width="100" height="100" id="nerd1 ">
+            </div>
+            <div class="postBox" id="right">
+                    <a href="/frontblog?author_id=3" ">
+                    <img src="assets/images/nerdgirltemp.jpg" width="100" height="100" id="nerd1 "> 
+            </div>
         </div>
     </div>
-    <div id="login-box" class="login-popup">
-        <a href="#" class="close">Close</a>
-        <form method="post" class="signin" action="#">
-            <fieldset class="textbox">
-                <label class="username">
+    <div id="login-box " class="login-popup ">
+        <a href="# " class="close ">Close</a>
+        <form method="post " class="signin " action="# ">
+            <fieldset class="textbox ">
+                <label class="username ">
                     <span>LinkedIn</span>
-                    <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Username">
+                    <input id="username " name="username " value=" " type="text " autocomplete="on " placeholder="Username ">
                 </label>
-                <label class="password">
+                <label class="password ">
                     <span>Password</span>
-                    <input id="password" name="password" value="" type="password" placeholder="Password">
+                    <input id="password " name="password " value=" " type="password " placeholder="Password ">
                 </label>
-                <button class="submit button" type="button">Sign in</button>
+                <button class="submit button " type="button ">Sign in</button>
                 <p>
-                    <a class="forgot" href="#">Forgot your password?</a>
+                    <a class="forgot " href="# ">Forgot your password?</a>
                 </p>
             </fieldset>
         </form>
@@ -76,7 +87,7 @@ $(document).ready(function() {
         });
 
         // Add the mask to body
-        $('body').append('<div id="mask"></div>');
+        $('body').append('<div id="mask "></div>');
         $('#mask').fadeIn(300);
 
         return false;
