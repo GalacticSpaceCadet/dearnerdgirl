@@ -26,17 +26,13 @@
 </header>
 
 <body>
-	<div class="mainContainer">
-		<div class="statement">
-			<h2>Mission Statement</h2>
-			<hr>
-			<p></p>
+	<div class="mainContainer" id="app">
+		<div class="userDiary" v-for="diary in diaries">
+			<div class="userImage"><img :src="diary.image"></div>
+			<h2 class="userName">{{diary.author}}</h2>
+			<p class="userPost">{{diary.title}} - {{diary.body}}</p>
 		</div>
-		<div class="contentContainer" id="postContainer">
-			<div class="postBox" id="left"></div>
-			<div class="postBox" id="center"></div>
-			<div class="postBox" id="right"></div>
-		</div>
+
 	</div>
 	<div id="login-box" class="login-popup">
 		<a href="#" class="close">Close</a>
@@ -95,6 +91,22 @@
 			return false;
 		});
 	});
+
+
+
+	new Vue({
+		el: '#app',
+		data: {
+			diaries: []
+		},
+		mounted: function () {
+			var self = this;
+			axios.get('/diaries').then(function (result) {
+				console.log(result);
+				self.diaries = result.data;
+			});
+		}
+	})
 </script>
 
 </html>
