@@ -1,0 +1,635 @@
+html {
+	position: relative;
+}
+
+header {
+	height: 60px;
+	width: 100vw;
+	background-color: #4E453E;
+	position: fixed;
+	z-index: 50;
+	top: 0px;
+	left: 0px;
+	margin: auto;
+	border-bottom: 2px solid #6A8E7A;
+	-webkit-box-shadow: -14px 29px 66px -6px #222;
+	-moz-box-shadow: -14px 29px 66px -6px #222;
+	box-shadow: -14px 29px 66px -6px #222;
+}
+
+.logo {
+	color: #dfdfdf;
+	margin-top: 13px;
+	display: inline-block;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	font-size: 2.2em;
+}
+
+.flower {
+	position: relative;
+	display: inline-block;
+	float: left;
+	height: 200px;
+	width: 200px;
+	margin-left: 50px;
+}
+
+header .navbar {
+	float: right;
+	position: relative;
+	display: inline-block;
+	margin-right: 90px;
+	margin-top: 20px;
+}
+
+.navbar a {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	text-decoration: none;
+	color: #dfdfdf;
+}
+
+.navbar p {
+	font-family: 'Share Tech Mono', monospace;
+	color: #6A8E7A;
+	font-size: 1.5em;
+}
+
+body {
+	margin: 0 0;
+	height: 100%;
+	width: 100%;
+	background: url("../images/background.jpg") fixed;
+	background-size: cover;
+}
+
+.mainContainer {
+	margin-top: 70px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.statement {
+	position: relative;
+	min-height: 150px;
+	width: 70vw;
+	margin: 0 auto;
+	top: 50px;
+	border: 2px solid #6A8E7A;
+	border-radius: 20px;
+	-webkit-box-shadow: -14px 29px 66px -6px #222;
+	-moz-box-shadow: -14px 29px 66px -6px #222;
+	box-shadow: -14px 29px 66px -6px #222;
+	color: #ddd;
+}
+
+.statement h2 {
+	margin-top: 14px;
+	margin-bottom: 14px;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	color: #ddd;
+	font-size: 1.8em;
+	text-align: center;
+	padding-top: -15px;
+	padding-bottom: -15px;
+	text-shadow: 4px 4px 5px #222;
+}
+
+.statement p {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	font-size: 1em;
+	color: #dfdfdf;
+	text-shadow: 4px 4px 5px #222;
+}
+
+hr {
+	width: 90%;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, #6A8E7A, #ddd, #6A8E7A);
+}
+
+.contentContainer {
+	position: relative;
+	margin-top: 100px;
+}
+
+.postBox {
+	position: relative;
+	border: 2px solid #6A8E7A;
+	display: inline-block;
+	border-radius: 20px;
+	-webkit-box-shadow: -14px 29px 66px -6px #222;
+	-moz-box-shadow: -14px 29px 66px -6px #222;
+	box-shadow: -14px 29px 66px -6px #222;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	font-size: 1em;
+	color: #ddd;
+	text-shadow: 4px 4px 5px #222;
+
+}
+
+#left {
+    float:left;
+    min-width: 25%;
+    margin-left: 60px;
+    margin-right: 5px;	
+    min-height: 275px;
+}
+
+#center {
+    margin: 0 auto;
+    min-width: 25%;
+	margin-left: 5px;
+    margin-right: 5px;
+    min-height: 275px;
+}
+
+#right {
+    float:right;
+    min-width: 25%;
+    margin-right: 60px;
+    margin-left: 15px;
+    min-height: 275px;
+}
+
+/* Personal Diaries */
+
+.cmsContainer {
+	margin-top: 125px;
+}
+
+#cms select {
+	color: #dfdfdf;
+	background-color: transparent;
+	width: 20%;
+	text-shadow: 4px 4px 5px #222;
+	color: #dfdfdf;
+	font-size: .8em;
+	background-color: transparent;
+	border: 2px solid #dfdfdf;
+	border-radius: 5px;
+	text-shadow: 4px 4px 5px #222;
+	padding: 5px;
+}
+
+#cms form {
+	margin-top: 100px;
+}
+
+#cms .titleField {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	font-size: 1.4em;
+	color: #dfdfdf;
+	text-shadow: 4px 4px 5px #222;
+	text-align: left;
+}
+
+#cms input {
+	height: 1.4em;
+	width: 50%;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	border: 2px solid #6A8E7A;
+	border-radius: 5px;
+
+}
+
+#cms #title {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	color: #222;
+	font-size: 1em;
+	text-shadow: none;
+}
+
+#cms textarea {
+	height: 30vh;
+	width: 70%;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	border: 2px solid #6A8E7A;
+	border-radius: 5px;
+	font-size: 1.1em;
+}
+
+.cmsContainer .submitBtn {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	text-decoration: none;
+	color: #dfdfdf;
+	font-size: 1.2em;
+	background-color: transparent;
+	border: 2px solid #6A8E7A;
+	border-radius: 5px;
+	text-shadow: 4px 4px 5px #222;
+	padding: 5px;
+}
+
+/* Blog Diaries Page */
+.blogContainer {
+	margin-top: 135px;
+}
+
+.blogContainer .submitBtn {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	text-decoration: none;
+	color: #dfdfdf;
+	font-size: 1.2em;
+	background-color: transparent;
+	border: 2px solid #6A8E7A;
+	border-radius: 5px;
+	text-shadow: 4px 4px 5px #222;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+.authorInput {
+	margin-top: 100px;
+	height: 1.5em;
+	width: 40%;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	border: 2px solid #6A8E7A;
+	border-radius: 5px;
+}
+
+.createAuthor .submitBtn {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	text-decoration: none;
+	color: #dfdfdf;
+	font-size: 1em;
+	background-color: transparent;
+	border: 2px solid #6A8E7A;
+	border-radius: 5px;
+	text-shadow: 4px 4px 5px #222;
+	padding: 5px;
+}
+
+.authorTable {
+	margin: 35px auto;
+	border: none;
+	width: 50vw;
+}
+
+.tableHead th {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	color: #dfdfdf;
+	font-size: 1.2em;
+	text-shadow: 4px 4px 5px #222;
+}
+
+
+/* Contacts Form */
+.formContainer {
+	margin-top: 135px;
+	margin-left: 25%;
+}
+
+.formInput {
+	height: 25px;
+	width: 65%;
+}
+
+.comment {
+	height: 150px;
+	width: 65%;
+}
+
+.formContainer form {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	font-size: 1.2em;
+	color: #ddd;
+	text-shadow: 4px 4px 5px #222;
+}
+
+.formContainer input {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	border: 2px solid #6A8E7A;
+	background-color: none;
+	border-radius: 5px;
+}
+ 
+.formContainer textarea {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	border: 2px solid #6A8E7A;
+	border-radius: 5px;
+}
+
+.formContainer input:-moz-placeholder {
+    color: #666;
+    font-family: 'Share Tech Mono', monospace, Arial;
+}
+
+.formContainer input::-webkit-input-placeholder {
+    color: #666;
+    font-family: 'Share Tech Mono', monospace, Arial;
+}
+
+.formContainer .submitBtn {
+	font-size: 1em;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	text-decoration: none;
+	color: #dfdfdf;
+	border: 2px solid #6A8E7A;
+	border-radius: 10px;
+    cursor: pointer;
+    padding: 6px 6px 4px;
+    background: transparent;
+}
+
+footer {
+	position: fixed;
+	height: 35px;
+	width: 100vw;
+	background-color: #423a33;
+	text-align: center;
+	font-size: .9em;
+	bottom: 0;
+	border-top: 2px solid #6A8E7A;
+}
+
+footer p {
+	margin-top: 10px;
+	color: #dfdfdf;
+	font-family: 'Share Tech Mono', monospace, Arial;
+	font-size: 1em;
+}
+/* Login Popup */
+/* Mask for background, by default is not display */
+#mask {
+    display: none;
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 75;
+}
+
+/* You can customize to your needs  */
+.login-popup {
+    display: none;
+    background: #4E453E;
+    padding: 10px;
+    border: 2px solid #6A8E7A;
+    float: left;
+    font-family: 'Share Tech Mono', monospace, Arial;
+	font-size: 1.2em;
+	color: #dfdfdf;
+	text-shadow: 4px 4px 5px #222;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    box-shadow: 0px 0px 20px #222;
+    /* CSS3 */
+    -moz-box-shadow: 0px 0px 20px #222;
+    /* Firefox */
+    -webkit-box-shadow: 0px 0px 20px #222;
+    /* Safari, Chrome */
+	border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    /* Firefox */
+    -webkit-border-radius: 3px;
+    /* Safari, Chrome */;
+}
+
+.close {
+	float: right;
+    margin: -34px -14px 0 0;
+    border: none;
+}
+
+fieldset {
+    border: none;
+}
+
+form.signin .textbox label {
+    display: block;
+    padding-bottom: 7px;
+}
+
+form.signin .textbox span {
+    display: block;
+}
+
+form.signin p, form.signin span {
+    color: #dfdfdf;
+    font-size: .8em;
+}
+
+form.signin .textbox input {
+    background: #ddd;
+    border: 2px solid #6A8E7A;
+    color: #222;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font-family: 'Share Tech Mono', monospace, Arial;
+    padding: 6px 6px 4px;
+    width: 200px;
+}
+
+form .signin input:-moz-placeholder {
+    color: #666;
+    font-family: 'Share Tech Mono', monospace, Arial;
+}
+
+form .signin input::-webkit-input-placeholder {
+    color: #666;
+    font-family: 'Share Tech Mono', monospace, Arial;
+}
+
+.button {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 2px solid #6A8E7A;
+	border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 6px 4px;
+    font-family: 'Share Tech Mono', monospace, Arial;
+	text-decoration: none;
+	color: #dfdfdf;
+	text-shadow: 4px 4px 5px #222;
+	background-color: #4E453E;
+	font-size: .8em;
+}
+
+.login-popup a {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	text-decoration: none;
+	color: #dfdfdf;
+}
+
+
+/*====================Media Queries=========================*/
+
+
+@media screen and (max-width: 960px) {
+
+	header {
+		height: 60px;
+	}
+
+	.logo {
+		margin-top: 17px;
+		font-size: 2em;
+	}
+
+	.flower {
+		height: 160px;
+		width: 160px;
+		margin-left: 35px;
+	}
+
+	header .navbar {
+		margin-right: 50px;
+		margin-top: 20px;
+	}
+
+	.navbar a {
+		font-size: .8em;
+	}
+
+	.navbar p {
+		font-size: 1.5em;
+	}
+
+	.statement {
+		min-height: 125px;
+		width: 70vw;
+		top: 50px;
+	}
+
+	.statement h2 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 1.4em;
+		padding-top: -10px;
+		padding-bottom: -10px;
+	}
+
+	.statement p {
+		font-size: .8em;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+
+		header {
+		height: 50px;
+	}
+
+	.logo {
+		margin-top: 13px;
+		font-size: 1.7em;
+	}
+
+	.flower {
+		height: 120px;
+		width: 120px;
+		margin-left: 25px;
+	}
+
+	header .navbar {
+		margin-right: 45px;
+		margin-top: 16px;
+	}
+
+	.navbar a {
+		font-size: .9em;
+	}
+
+	.navbar p {
+		font-size: .9em;
+	}
+
+	.statement {
+		min-height: 115px;
+		width: 70vw;
+		top: 35px;
+	}
+
+	.statement h2 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 1.2em;
+		padding-top: -10px;
+		padding-bottom: -10px;
+	}
+
+	.statement p {
+		font-size: .7em;
+	}
+
+	footer {
+		height: 30px;
+		font-size: .9em;
+	}
+
+	footer p {
+		margin-top: 10px;
+		font-size: .8em;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	header {
+		height: 45px;
+	}
+
+	.logo {
+		margin-top: 11px;
+		font-size: 1.5em;
+	}
+
+	.flower {
+		height: 105px;
+		width: 105px;
+		margin-left: 20px;
+	}
+
+	header .navbar {
+		margin-right: 35px;
+		margin-top: 14px;
+	}
+
+	.navbar a {
+		font-size: .9em;
+	}
+
+	.navbar p {
+		font-size: .9em;
+	}
+
+	.statement {
+		min-height: 105px;
+		width: 70vw;
+		top: 25px;
+	}
+
+	.statement h2 {
+		margin-top: 8px;
+		margin-bottom: 8px;
+		font-size: 1em;
+		padding-top: -10px;
+		padding-bottom: -10px;
+	}
+
+	.statement p {
+		font-size: .7em;
+	}
+
+		footer {
+		height: 25px;
+		font-size: .9em;
+	}
+
+	footer p {
+		margin-top: 8px;
+		font-size: .7em;
+	}
+}
+
