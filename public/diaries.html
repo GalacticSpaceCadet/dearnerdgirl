@@ -6,7 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	</head>
 	<header>
 		<img src="assets/images/flower.jpg" class="flower">
@@ -21,12 +21,28 @@
 	</header>
 	<body>
 		<div class="mainContainer">	
-			<div class="createAuthor">
-				<input type="text" class="authorInput" id="title">
-				<a class="submitBtn" href="/authors"> Create Author</a>
+			<form class="createAuthor">
+				<input type="text" class="authorInput" id="authorName">
+				<button type="submit" class="submitBtn" href="/authors" id="authorSubmit"> Create Author</button>
+			</form>
+
+			<div class="authorContainer">
+				<table class="authorTable">
+					<thead class="tableHead">
+						<tr>
+							<th>Author</th>
+							<th># of Posts</th>
+							<th>View Post</th>
+							<th>New Post</th>
+							<th>Delete Author</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
 			</div>
 			<div class="blogContainer">
-			<a class="submitBtn" href="/cms">New Post</a>
+			<a class="submitBtn" href="cms.html">New Post</a>
 			<a class="submitBtn" href="/authors">Manage Authors</a>
 			</div>
 		</div>
@@ -54,5 +70,5 @@
 		<p>&copy; Dear nerdGirl 2017</p>
 	</footer>
 	<script src="js/cms.js" type="text/javascript"></script>
-	<script src="login.js"></script>
+	<script src="login.js" type="text/javacript"></script>
 </html>

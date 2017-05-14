@@ -1,15 +1,25 @@
 {
-  "name": "passport-linkedin-examples-login",
-  "version": "0.0.0",
+  "name": "dearnerdgirl",
+  "version": "1.0.0",
+  "description": "Project 2: Building a website where women in tech can write letters to young girls in tech to boost morale.",
+  "main": "server.js",
   "dependencies": {
-    "body-parser": "^1.17.1",
-    "cookie-parser": "^1.4.3",
-    "ejs": ">= 0.0.0",
-    "express": ">= 0.0.0",
-    "express-session": "^1.15.2",
-    "method-override": "^2.3.8",
-    "morgan": "^1.8.1",
-    "passport": ">= 0.0.0",
-    "passport-linkedin": ">= 0.0.0"
-  }
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GalacticSpaceCadet/dearnerdgirl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GalacticSpaceCadet/dearnerdgirl/issues"
+  },
+  "homepage": "https://github.com/GalacticSpaceCadet/dearnerdgirl#readme"
 }

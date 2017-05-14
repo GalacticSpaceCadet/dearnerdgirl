@@ -162,7 +162,7 @@ hr {
 #cms select {
 	color: #dfdfdf;
 	background-color: transparent;
-	width: 21px;
+	width: 20%;
 	text-shadow: 4px 4px 5px #222;
 	color: #dfdfdf;
 	font-size: .8em;
@@ -186,11 +186,19 @@ hr {
 }
 
 #cms input {
-	height: 1.5em;
+	height: 1.4em;
 	width: 50%;
 	font-family: 'Share Tech Mono', monospace, Arial;
-	border: 1px solid #6A8E7A;
+	border: 2px solid #6A8E7A;
 	border-radius: 5px;
+
+}
+
+#cms #title {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	color: #222;
+	font-size: 1em;
+	text-shadow: none;
 }
 
 #cms textarea {
@@ -199,6 +207,7 @@ hr {
 	font-family: 'Share Tech Mono', monospace, Arial;
 	border: 2px solid #6A8E7A;
 	border-radius: 5px;
+	font-size: 1.1em;
 }
 
 .cmsContainer .submitBtn {
@@ -234,9 +243,9 @@ hr {
 .authorInput {
 	margin-top: 100px;
 	height: 1.5em;
-	width: 50%;
+	width: 40%;
 	font-family: 'Share Tech Mono', monospace, Arial;
-	border: 1px solid #6A8E7A;
+	border: 2px solid #6A8E7A;
 	border-radius: 5px;
 }
 
@@ -250,6 +259,19 @@ hr {
 	border-radius: 5px;
 	text-shadow: 4px 4px 5px #222;
 	padding: 5px;
+}
+
+.authorTable {
+	margin: 35px auto;
+	border: none;
+	width: 50vw;
+}
+
+.tableHead th {
+	font-family: 'Share Tech Mono', monospace, Arial;
+	color: #dfdfdf;
+	font-size: 1.2em;
+	text-shadow: 4px 4px 5px #222;
 }
 
 
