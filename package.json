@@ -1,0 +1,34 @@
+{
+  "name": "dearnerdgirl",
+  "version": "1.0.0",
+  "description": "A website to connect young female coders with their adult counterparts.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GalacticSpaceCadet/dearnerdgirl.git"
+  },
+  "author": "Diana Gandy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GalacticSpaceCadet/dearnerdgirl/issues"
+  },
+  "homepage": "https://github.com/GalacticSpaceCadet/dearnerdgirl#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "config.json": "0.0.4",
+    "express": "^4.15.2",
+    "mysql": "^2.12.0",
+    "passport": "^0.3.2",
+    "pg": "^6.1.5",
+    "sequelize": "^3.28.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "social",
+    "network"
+  ]
+}

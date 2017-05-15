@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+<header>
+    <img src="assets/images/flower.jpg" class="flower">
+    <a href="index.html"><h1 class="logo"> Dear nerdGirl</h1></a>
+    <div class="navbar">
+        <P>
+            <a href="#login-box" class="login-window">Login</a> |
+            <a href="diaries.html">Diaries</a> |
+            <a href="contact.html">Contact</a>
+        </P>
+    </div>
+</header>
+
+<body>
+    <div class="mainContainer">
+        <div class="statement">
+            <h2>Mission Statement</h2>
+            <hr>
+           <!--  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. </p> -->
+            <!-- <p></p> -->
+        </div>
+        <div class="contentContainer" id="postContainer">
+            
+            <div class="postBox" id="left">
+                <a href="/frontblog?author_id=1" ">
+                    <img src="assets/images/nerdgirltemp.jpg" id="nerd1">
+                </a>
+            </div>
+            <div class="postBox " id="center">
+                <a href="/frontblog?author_id=2 ">
+                    <img src="assets/images/nerdgirltemp.jpg" id="nerd2">
+                </a>
+            </div>
+            <div class="postBox" id="right">
+                <a href="/frontblog?author_id=3">
+                    <img src="assets/images/nerdgirltemp.jpg" id="nerd3">
+                </a> 
+
+            </div>
+        </div>
+    </div>
+    <div id="login-box " class="login-popup ">
+        <a href="# " class="close ">Close</a>
+        <form method="post " class="signin " action="# ">
+            <fieldset class="textbox ">
+                <label class="username ">
+                    <span>LinkedIn</span>
+                    <input id="username " name="username " value=" " type="text " autocomplete="on " placeholder="Username ">
+                </label>
+                <label class="password ">
+                    <span>Password</span>
+                    <input id="password " name="password " value=" " type="password " placeholder="Password ">
+                </label>
+                <button class="submit button " type="button ">Sign in</button>
+                <p>
+                    <a class="forgot " href="# ">Forgot your password?</a>
+                </p>
+            </fieldset>
+        </form>
+    </div>
+</body>
+<footer>
+    <p>&copy; Dear, Nerd Girl 2017</p>
+</footer>
+
+
+</html>
